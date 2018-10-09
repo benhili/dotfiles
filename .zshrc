@@ -1,9 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/opt/python/libexec/bin:$PATH
-export GOPATH=$HOME/go-workspace # don't forget to change your path correctly!
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
 #:/usr/local/bin:$PATH
 
 # ZSHZLE 
@@ -11,6 +7,9 @@ export PATH=$PATH:$GOROOT/bin
 
 # Bash aliases
 alias kc='kubectl'
+alias vim='nvim'
+alias vi='nvim'
+alias c='clear'
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/benhili/.oh-my-zsh"
