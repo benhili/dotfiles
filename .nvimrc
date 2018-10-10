@@ -9,6 +9,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'sbdchd/neoformat'
 Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-jedi'
+Plug 'connorholyday/vim-snazzy'
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 

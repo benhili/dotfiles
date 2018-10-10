@@ -10,6 +10,7 @@ alias kc='kubectl'
 alias vim='nvim'
 alias vi='nvim'
 alias c='clear'
+alias ub='ssh asio@ubuntu1804'
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/benhili/.oh-my-zsh"
