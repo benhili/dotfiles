@@ -115,3 +115,5 @@ prompt pure
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
