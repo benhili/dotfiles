@@ -1,20 +1,20 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/opt/python/libexec/bin:$PATH
+export PATH="$HOME/bin:/usr/local/opt/python/libexec/bin:$PATH"
+export GPG_TTY=$(tty)
 #:/usr/local/bin:$PATH
 
 # ZSHZLE 
 
 
 # Bash aliases
-alias kc='kubectl'
 alias vim='nvim'
 alias vi='nvim'
 alias c='clear'
 alias ub='ssh asio@ubuntu1804'
+alias ubroot='ssh asio@asio.local'
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/benhili/.oh-my-zsh"
-export KUBECONFIG=~/.kube/local-config:~/.kube/sps-admin-config
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -76,6 +76,8 @@ ZSH_THEME=""
 plugins=(
   git
   vi-mode
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 bindkey -M viins "jj" vi-cmd-mode
@@ -114,6 +116,5 @@ prompt pure
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
