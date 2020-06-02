@@ -1,0 +1,82 @@
+: '
+             ________________________________________________
+            /                                                \
+           |    _________________________________________     |
+           |   |  ~/dotfiles/zsh master*                 |    |
+           |   |  🌊 zsh                                 |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |_________________________________________|    |
+           |                                                  |
+            \_________________________________________________/
+                   \___________________________________/
+                ___________________________________________
+             _--    .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.  --- --_
+          _--.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.  .-.-.--_
+       _--.-.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--__-. .-.-.-.--_
+    _--.-.-.-.-. .-----.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-----. .-.-.-.-.--_
+ _--.-.-.-.-.-. .---.-. .-------------------------. .-.---. .---.-.-.-.--_
+:-------------------------------------------------------------------------:
+----._.-------------------------------------------------------------._.----
+
+'
+configPath="$HOME/dotfiles/zsh"
+source $configPath/aliases
+source $configPath/plugins
+
+path+=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH
+
+# Node memory allocation
+export NODE_OPTIONS=--max_old_space_size=4096
+
+# TODO figure out wtf this is. Do I need it?
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Z
+source /usr/local/etc/profile.d/z.sh
+
+# Pure prompt config
+zstyle :prompt:pure:path color green
+zstyle ':prompt:pure:prompt:*' color yellow
+
+# λ in case the emoji gets obnoxious
+PURE_PROMPT_SYMBOL="🌊"
+
+# FD to escape vim insert mode
+bindkey -M viins 'fd' vi-cmd-mode
+
+# Required for Ranger
+export EDITOR="nvim"
+
+# TODO delete these when/if I stop working with serverless
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/hero/Dev/linktr.ee/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/hero/Dev/linktr.ee/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/hero/Dev/linktr.ee/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/hero/Dev/linktr.ee/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/hero/Dev/linktr.ee/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/hero/Dev/linktr.ee/node_modules/tabtab/.completions/slss.zsh
+
+# 🤔
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Gotta have it :) the \e[35m is a magenta color code
+if [ `which fortune` ]; then
+    echo ""
+    echo "\e[35m$(fortune)"
+fi
+
