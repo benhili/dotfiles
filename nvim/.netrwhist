@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/Users/hero/Dev/linktr.ee/services/profiles/src/pages'
+let g:netrw_dirhist_1='/Users/hero/Dev/linktr.ee/packages'
+let g:netrw_dirhist_0='/Users/hero/Dev/linktr.ee/packages/ui-profile'
+let g:netrw_dirhist_9='/Users/hero/Dev/linktr.ee/packages/ui-profile/src'
+let g:netrw_dirhist_8='/Users/hero/Dev/linktr.ee/packages/ui-profile/src/Profile'
+let g:netrw_dirhist_7='/Users/hero/Dev/linktr.ee/packages/ui-core/theme'
+let g:netrw_dirhist_6='/Users/hero/Dev/linktr.ee/packages/ui-core'
+let g:netrw_dirhist_5='/Users/hero/Dev/linktr.ee/packages/ui-core/theme'
+let g:netrw_dirhist_4='/Users/hero/Dev/linktr.ee/packages/ui-core'
+let g:netrw_dirhist_3='/Users/hero/Dev/linktr.ee/services/profiles/src/pages'

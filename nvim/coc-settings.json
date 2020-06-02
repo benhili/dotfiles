@@ -1,0 +1,17 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "markdown",
+    "javascript",
+    "typescript",
+    "graphql",
+    "html",
+    "yaml",
+    "json",
+    "php",
+    "css",
+    "graphql",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "intelephense.format.enable": false
+}
