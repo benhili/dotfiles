@@ -63,6 +63,8 @@ endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
+let $FZF_DEFAULT_COMMAND = 'rg --files'
+
 " Git grep
 command! -bang -nargs=* GGrep
   \ call fzf#vim#grep(

@@ -33,11 +33,18 @@ configPath="$HOME/dotfiles/zsh"
 source $configPath/aliases
 source $configPath/plugins
 
-path+=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+path+=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin/~/.emacs.d/bin
 export PATH
+
+HISTFILE=~/.zsh_history
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
 
 # Node memory allocation
 export NODE_OPTIONS=--max_old_space_size=4096
+
+# FZF use ripgrep (for .gitignore filtering)
+export FZF_DEFAULT_COMMAND='rg --files'
 
 # TODO figure out wtf this is. Do I need it?
 export NVM_DIR="$HOME/.nvm"
@@ -80,3 +87,7 @@ if [ `which fortune` ]; then
     echo "\e[35m$(fortune)"
 fi
 
+# Allows pyenv to manage our shell path 
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
