@@ -33,11 +33,10 @@ set number                              " Enables line numbers
 syntax enable                           " Enables syntax highlighing
 set termguicolors                       " Required for ayu for some reason
 let ayucolor="mirage"
-colorscheme ayu                         " Ayu theme
-let g:netrw_liststyle = 3               " Tree style netrw
-let g:netrw_banner = 0
+colorscheme ayu
 set shellcmdflag=-ic
-
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
+                                           \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>""
 inoremap fd <Esc>
 map <leader><Tab> :tabnext <CR>
 map <leader>n :tabnew <CR>
