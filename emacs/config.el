@@ -1,31 +1,12 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
-
-
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "Ben Hili"
       user-mail-address "ben.hili1994@gmail.com")
 
-;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
-;; are the three important ones:
-;;
-;; + `doom-font'
-;; + `doom-variable-pitch-font'
-;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
-;;   presentations or streaming.
-;;
-;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
-;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "IBM Plex Mono" :size 10))
-
-
-;; There are two ways to load a theme. Both assume the theme is installed and
-;; available. You can either set `doom-theme' or manually load a theme with the
-;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one-light)
+(setq doom-font (font-spec :family "IBM Plex Mono" :size 11))
+(setq doom-theme 'doom-city-lights)
 
 ;; Escape vim mode sequence
 (setq-default evil-escape-key-sequence "fd")
@@ -37,11 +18,6 @@
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
-
-;; LSP black magic (keeping this off for a bit)
-;; (require 'lsp-mode)
-;; (add-hook 'typescript-mode-hook #'lsp)
-
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -62,7 +38,6 @@
 
 
 (require 'prettier-js)
-
 (setq js-indent-level 2)
 (setq-default typescript-indent-level 2)
 
@@ -94,10 +69,9 @@
 
 
 ;; Ivy posframe
-
 (require 'ivy-posframe)
 (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-window-center)))
 (ivy-posframe-mode 1)
 
-(add-hook 'org-mode-hook 'darkroom-mode 'flyspell-mode)
+(add-hook 'org-mode-hook 'flyspell-mode)
 (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
