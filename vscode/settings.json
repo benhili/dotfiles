@@ -52,5 +52,6 @@
 
   // misc
   "workbench.editor.showTabs": false,
-  "diffEditor.renderSideBySide": false
+  "diffEditor.renderSideBySide": false,
+  "git.autofetch": true
 }
