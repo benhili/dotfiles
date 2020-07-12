@@ -82,10 +82,10 @@
        ;;grammar           ; tasing grammar mistake every you make
 
        :tools
-       ;;ansible
+       ansible
        ;;debugger          ; FIXME stepping through code, to help you add bugs
        ;;direnv
-       ;;docker
+       docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
@@ -100,7 +100,7 @@
        ;;pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders
        ;;rgb               ; creating color strings
-       (terraform)        ; infrastructure as code
+       terraform           ; infrastructure as code
        ;;tmux              ; an API for interacting with tmux
        ;;upload            ; map local to remote projects via ssh/ftp
 
@@ -148,8 +148,7 @@
         ;;+pomodoro        ; be fruitful with the tomato technique
         +present)          ; using org-mode for presentations
        ;;perl              ; write code no one else can comprehend
-       (php
-        +lsp)              ; perl's insecure younger brother
+       php                 ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
        (python

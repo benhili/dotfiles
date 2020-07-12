@@ -33,7 +33,7 @@ configPath="$HOME/dotfiles/zsh"
 source $configPath/aliases
 source $configPath/plugins
 
-path+=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin/~/.emacs.d/bin
+path+=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin/~/.emacs.d/bin:~/.composer/vendor/bin
 export PATH
 
 HISTFILE=~/.zsh_history
