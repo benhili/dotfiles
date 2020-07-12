@@ -5,7 +5,7 @@
 (setq user-full-name "Ben Hili"
       user-mail-address "ben.hili1994@gmail.com")
 
-(setq doom-font (font-spec :family "IBM Plex Mono" :size 11))
+(setq doom-font (font-spec :family "IBM Plex Mono" :size 13))
 (setq doom-theme 'doom-city-lights)
 
 ;; Escape vim mode sequence

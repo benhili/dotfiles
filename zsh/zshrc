@@ -51,15 +51,12 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# Z
-source /usr/local/etc/profile.d/z.sh
-
 # Pure prompt config
 zstyle :prompt:pure:path color green
 zstyle ':prompt:pure:prompt:*' color yellow
 
 # λ in case the emoji gets obnoxious
-PURE_PROMPT_SYMBOL="🌊"
+PURE_PROMPT_SYMBOL="λ"
 
 # FD to escape vim insert mode
 bindkey -M viins 'fd' vi-cmd-mode

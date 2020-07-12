@@ -1,5 +1,5 @@
 # Homebrew antigen directory
-source /usr/local/Cellar/antigen/2.2.3/share/antigen/antigen.zsh
+source ~/.config/antigen/antigen.zsh
 
 # Antigen packages
 antigen use oh-my-zsh
