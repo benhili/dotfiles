@@ -41,7 +41,7 @@ inoremap fd <Esc>
 map <leader><Tab> :tabnext <CR>
 map <leader>n :tabnew <CR>
 nnoremap <silent> <Space> :WhichKey '<Space>'<CR>
-nnoremap <leader>w <C-W><C-W>
+nnoremap <leader>w <C-W>
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nnoremap <silent> <leader>z :Goyo<cr>
 

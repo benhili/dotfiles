@@ -5,8 +5,9 @@
 (setq user-full-name "Ben Hili"
       user-mail-address "ben.hili1994@gmail.com")
 
-(setq doom-font (font-spec :family "IBM Plex Mono" :size 11))
+(setq doom-font (font-spec :family "IBM Plex Mono" :size 10))
 (setq doom-theme 'doom-city-lights)
+(setq lsp-log-io t)
 
 ;; Escape vim mode sequence
 (setq-default evil-escape-key-sequence "fd")
@@ -50,7 +51,7 @@
 (setq org-directory (expand-file-name "~/Documents/org"))
 
 (setq company-idle-delay 0)
-(setq company-minimum-prefix-length 4)
+(setq company-minimum-prefix-length 2)
 
 (defun prettier-format-php ()
   "Format php files with prettier on save"
@@ -75,3 +76,12 @@
 
 (add-hook 'org-mode-hook 'flyspell-mode)
 (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
+
+;; phpactor completion
+(use-package php-mode
+  ;;
+  :hook ((php-mode . (lambda () (set (make-local-variable 'company-backends)
+       '(;; list of backends
+         company-phpactor
+         company-files
+         ))))))
