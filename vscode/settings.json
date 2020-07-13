@@ -1,7 +1,28 @@
 {
+  "editor.fontFamily": "FiraCode-Retina",
+  "files.exclude": {
+    ".svn": true,
+    ".git": true,
+    ".hg": true,
+    "CVS": true,
+    "lib": true,
+    "node_modules": true,
+    "dist": true,
+    "coverage": true,
+    "_warmup": true,
+    ".terraform": true,
+    ".terragrunt-cache": true,
+    ".webpack": true,
+    ".serverless": true,
+    "app/cache": true,
+    "app/vendor": false,
+    "psalm-report.json": true
+  },
+  "editor.renderWhitespace": "all",
+
   // vim
   "vim.enableNeovim": true,
-  "vim.neovimPath": "/usr/bin/nvim",
+  "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.sneak": true,
   "vim.leader": " ",
   "vim.insertModeKeyBindings": [
@@ -49,6 +70,18 @@
   // formatting
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+
+  "[php]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "karye.prettier-php"
+  },
+  "[yaml]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[sass]": {
+    "editor.formatOnSave": false
+  },
 
   // misc
   "workbench.editor.showTabs": false,
