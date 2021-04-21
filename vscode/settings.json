@@ -1,5 +1,6 @@
 {
   "editor.fontFamily": "FiraCode-Retina",
+  "editor.fontLigatures": true,
   "files.exclude": {
     ".svn": true,
     ".git": true,
@@ -18,8 +19,7 @@
     "app/vendor": false,
     "psalm-report.json": true
   },
-  "editor.renderWhitespace": "all",
-
+  "editor.renderWhitespace": "trailing",
   // vim
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
@@ -31,7 +31,6 @@
       "after": ["<Esc>"]
     }
   ],
-
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "w", "l"],
@@ -64,27 +63,31 @@
     {
       "before": ["<leader>", "t"],
       "commands": ["workbench.action.terminal.toggleTerminal"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<leader>", "g", "s"],
+      "commands": ["workbench.view.extension.gitlens"]
     }
   ],
-
   // formatting
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-
-  "[php]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "karye.prettier-php"
-  },
   "[yaml]": {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[sass]": {
     "editor.formatOnSave": false
   },
-
   // misc
-  "workbench.editor.showTabs": false,
-  "diffEditor.renderSideBySide": false,
-  "git.autofetch": true
+  "diffEditor.renderSideBySide": true,
+  "git.autofetch": true,
+  "workbench.sideBar.location": "right",
+  "yaml.validate": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Default Light+"
 }
