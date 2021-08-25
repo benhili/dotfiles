@@ -33,8 +33,16 @@ configPath="$HOME/dotfiles/zsh"
 source $configPath/aliases
 source $configPath/plugins
 
-path+=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin/~/.emacs.d/bin:~/.composer/vendor/bin
-export PATH
+export GOPATH=$HOME/go
+fpath+=$HOME/.zsh/pure
+
+autoload -U promptinit; promptinit
+prompt pure
+
+path+=/usr/local/bin:/usr/bin:/bin:/usr/sbin
+path+=/usr/local/bin/go
+path+=$HOME/go/bin
+
 
 HISTFILE=~/.zsh_history
 HISTSIZE=999999999
@@ -46,8 +54,8 @@ export NODE_OPTIONS=--max_old_space_size=4096
 # FZF use ripgrep (for .gitignore filtering)
 export FZF_DEFAULT_COMMAND='rg --files'
 
-# setup nodenv
-eval "$(nodenv init -)"
+# uncomment if using nodenv
+# eval "$(nodenv init -)"
 
 # Pure prompt config
 zstyle :prompt:pure:path color green
@@ -62,25 +70,12 @@ bindkey -M viins 'fd' vi-cmd-mode
 # Required for Ranger
 export EDITOR="nvim"
 
-# TODO delete these when/if I stop working with serverless
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/hero/Dev/linktr.ee/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/hero/Dev/linktr.ee/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/hero/Dev/linktr.ee/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/hero/Dev/linktr.ee/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/hero/Dev/linktr.ee/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/hero/Dev/linktr.ee/node_modules/tabtab/.completions/slss.zsh
-
 # 🤔
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Gotta have it :) the \e[35m is a magenta color code
-if [ `which fortune` ]; then
-    echo ""
-    echo "\e[35m$(fortune)"
-fi
+echo ""
+echo "\e[35m$(fortune)"
 
 # Allows pyenv to manage our shell path 
 if command -v pyenv 1>/dev/null 2>&1; then
