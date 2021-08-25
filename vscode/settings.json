@@ -70,15 +70,15 @@
     },
     {
       "before": ["<leader>", "g", "s"],
-      "commands": ["workbench.view.extension.gitlens"]
-    }
+      "commands": ["magit.status"]
+    },
   ],
   // formatting
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "golang.go",
   "editor.formatOnSave": true,
   "[yaml]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    // "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[sass]": {
     "editor.formatOnSave": false
@@ -89,5 +89,7 @@
   "workbench.sideBar.location": "right",
   "yaml.validate": false,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Default Light+"
+  "workbench.colorTheme": "Rouge 2",
+  "go.lintOnSave": "file",
+  "go.lintTool": "golint",
 }

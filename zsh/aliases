@@ -12,3 +12,4 @@ alias tg='terragrunt'
 alias dcu='docker-compose up -d'
 alias local-sqs='aws --endpoint-url=http://localhost:4568 sqs'
 alias yui="yarn upgrade-interactive --latest"
+alias awsauth="aws-azure-login"
