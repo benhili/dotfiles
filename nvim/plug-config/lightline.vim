@@ -9,5 +9,6 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'gitbranch#name'
       \ },
-      \ 'colorscheme': 'ayu',
+      \ 'colorscheme': 'github_light',
       \ }
+
