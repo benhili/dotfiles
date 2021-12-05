@@ -35,6 +35,8 @@ set number                              " Enables line numbers
 syntax enable                           " Enables syntax highlighing
 set termguicolors                       " Required for ayu for some reason
 let g:rainbow_active = 1
+let g:coq_settings = { 'auto_start': v:true }
+let g:iced_enable_default_key_mappings = v:true
 colorscheme github-light
 
 inoremap fd <Esc>
