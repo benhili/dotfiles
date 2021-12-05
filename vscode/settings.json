@@ -1,5 +1,5 @@
 {
-  "editor.fontFamily": "FiraCode-Retina",
+  "editor.fontSize": 13,
   "editor.fontLigatures": true,
   "files.exclude": {
     ".svn": true,
@@ -20,65 +20,129 @@
     "psalm-report.json": true
   },
   "editor.renderWhitespace": "trailing",
-  // vim
-  "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.sneak": true,
   "vim.leader": " ",
+  "vim.localleader": ",",
   "vim.insertModeKeyBindings": [
     {
-      "before": ["f", "d"],
-      "after": ["<Esc>"]
+      "before": [
+        "f",
+        "d"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "w", "l"],
-      "commands": ["workbench.action.focusRightGroup"]
+      "before": [
+        "<leader>",
+        "w",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ]
     },
     {
-      "before": ["<leader>", "w", "h"],
-      "commands": ["workbench.action.focusLeftGroup"]
+      "before": [
+        "<leader>",
+        "w",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
     },
     {
-      "before": ["<leader>", "w", "j"],
-      "commands": ["workbench.action.focusBelowGroup"]
+      "before": [
+        "<leader>",
+        "w",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.focusBelowGroup"
+      ]
     },
     {
-      "before": ["<leader>", "w", "k"],
-      "commands": ["workbench.action.focusAboveGroup"]
+      "before": [
+        "<leader>",
+        "w",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.focusAboveGroup"
+      ]
     },
     {
-      "before": ["<leader>", "w", "d"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "before": [
+        "<leader>",
+        "w",
+        "d"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
     },
     {
-      "before": ["<leader>", "w", "\\"],
-      "commands": ["workbench.action.splitEditor"]
+      "before": [
+        "<leader>",
+        "w",
+        "\\"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
     },
     {
-      "before": ["<leader>", "w", "v"],
-      "commands": ["workbench.action.splitEditorOrthogonal"]
+      "before": [
+        "<leader>",
+        "w",
+        "v"
+      ],
+      "commands": [
+        "workbench.action.splitEditorOrthogonal"
+      ]
     },
     {
-      "before": ["<leader>", "t"],
-      "commands": ["workbench.action.terminal.toggleTerminal"]
+      "before": [
+        "<leader>",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.terminal.toggleTerminal"
+      ]
     },
     {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.view.explorer"]
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.explorer"
+      ]
     },
     {
-      "before": ["<leader>", "g", "s"],
-      "commands": ["magit.status"]
+      "before": [
+        "<leader>",
+        "g",
+        "s"
+      ],
+      "commands": [
+        "magit.status"
+      ]
     },
   ],
   // formatting
-  "editor.defaultFormatter": "golang.go",
   "editor.formatOnSave": true,
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+  },
+  "go.coverOnSingleTest": true,
   "[yaml]": {
-    "editor.formatOnSave": true,
-    // "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[sass]": {
     "editor.formatOnSave": false
@@ -88,8 +152,33 @@
   "git.autofetch": true,
   "workbench.sideBar.location": "right",
   "yaml.validate": false,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Rouge 2",
+  "workbench.iconTheme": "vscode-icons",
   "go.lintOnSave": "file",
   "go.lintTool": "golint",
+  "redhat.telemetry.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.colorTheme": "Darcula Theme from IntelliJ",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "git.path": "/usr/bin/git",
+  "go.toolsManagement.autoUpdate": true,
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
+  "terminal.integrated.fontSize": 14,
+  "editor.minimap.enabled": false,
+  "[clojure]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingOvertype": "always",
+    "editor.formatOnPaste": true
+  },
+  "calva.paredit.defaultKeyMap": "strict",
+  "calva.prettyPrintingOptions": {
+    "enabled": true,
+    "width": 120,
+    "maxLength": 50,
+    "printEngine": "pprint"
+  },
+  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  "calva.showCalvaSaysOnStart": false
 }
