@@ -33,14 +33,34 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set termguicolors
 set number                              " Enables line numbers
 syntax enable                           " Enables syntax highlighing
-set termguicolors                       " Required for ayu for some reason
+
 let g:rainbow_active = 1
-let g:coq_settings = { 'auto_start': v:true }
-let g:iced_enable_default_key_mappings = v:true
-colorscheme github-light
+let g:coq_settings = { 'auto_start': 'shut-up' }
+let g:theme_style = "light"
+
+colorscheme github_light
 
 inoremap fd <Esc>
 map <leader><Tab> :tabnext <CR>
 map <leader>n :tabnew <CR>
 nnoremap <silent> <Space> :WhichKey '<Space>'<CR>
+
+nnoremap <silent><leader>bp :BufferPrevious<CR>
+nnoremap <silent><leader>bn :BufferNext<CR>
+nnoremap <silent><leader>bd :BufferClose<CR>
+nnoremap <silent><leader>w/ :vsp<CR>
+nnoremap <silent><leader>wv :sp<CR>
+
+autocmd BufWritePre *.go lua vim.lsp.buf.formatting()
+autocmd BufWritePre *.clj lua vim.lsp.buf.formatting()
+
+lua << EOF
+require'lspconfig'.clojure_lsp.setup{}
+require'lspconfig'.gopls.setup{}
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true              
+  },
+}
+EOF
 
