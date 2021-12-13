@@ -28,4 +28,5 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
   Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
   Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+  Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 call plug#end()

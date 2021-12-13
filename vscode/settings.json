@@ -1,6 +1,8 @@
 {
-  "editor.fontSize": 13,
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontSize": 12,
   "editor.fontLigatures": true,
+  "workbench.fontAliasing": "antialiased",
   "files.exclude": {
     ".svn": true,
     ".git": true,
@@ -23,7 +25,6 @@
   "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.sneak": true,
   "vim.leader": " ",
-  "vim.localleader": ",",
   "vim.insertModeKeyBindings": [
     {
       "before": [
@@ -152,12 +153,12 @@
   "git.autofetch": true,
   "workbench.sideBar.location": "right",
   "yaml.validate": false,
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "go.lintOnSave": "file",
   "go.lintTool": "golint",
   "redhat.telemetry.enabled": false,
   "explorer.confirmDragAndDrop": false,
-  "workbench.colorTheme": "Darcula Theme from IntelliJ",
+  "workbench.colorTheme": "GitHub Light",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "git.path": "/usr/bin/git",
@@ -179,6 +180,11 @@
     "maxLength": 50,
     "printEngine": "pprint"
   },
-  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-  "calva.showCalvaSaysOnStart": false
+  "workbench.activityBar.visible": false,
+  "window.titleBarStyle": "custom",
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "search.useReplacePreview": true,
+  "python.formatting.provider": "black",
+  "window.zoomLevel": 1
 }

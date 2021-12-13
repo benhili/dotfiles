@@ -50,6 +50,8 @@ nnoremap <silent><leader>bn :BufferNext<CR>
 nnoremap <silent><leader>bd :BufferClose<CR>
 nnoremap <silent><leader>w/ :vsp<CR>
 nnoremap <silent><leader>wv :sp<CR>
+nnoremap <silent><leader>v <cmd>CHADopen<cr>
+nnoremap <silent><leader>t <cmd>:terminal<cr>
 
 autocmd BufWritePre *.go lua vim.lsp.buf.formatting()
 autocmd BufWritePre *.clj lua vim.lsp.buf.formatting()
@@ -57,6 +59,10 @@ autocmd BufWritePre *.clj lua vim.lsp.buf.formatting()
 lua << EOF
 require'lspconfig'.clojure_lsp.setup{}
 require'lspconfig'.gopls.setup{}
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.pyright.setup{}
+
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true              
