@@ -16,6 +16,7 @@ imap('fd', '<Esc>')
 nmap('<leader>bn', '<cmd>bnext<cr>')
 nmap('<leader>bp', '<cmd>bprev<cr>')
 nmap('<leader>bd', '<cmd>bdelete<cr>')
+nmap('<Esc>', '<cmd>noh<cr>')
 
 wk.register({
 	f = {
@@ -30,3 +31,4 @@ wk.register({
 		s = {"<cmd>Neogit<cr>", "neogit"}
 	}
 }, { prefix = "<leader>" })
+

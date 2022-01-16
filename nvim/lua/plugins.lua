@@ -2,17 +2,12 @@ return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
   use 'neovim/nvim-lspconfig'
   use 'nvim-lua/plenary.nvim'
-	use {
-		"folke/which-key.nvim",
-		config = function() 
-			require("which-key").setup { }
-		end
-	}
   use 'tpope/vim-surround'
   use 'justinmk/vim-sneak'
   use 'junegunn/rainbow_parentheses.vim'
   use 'Olical/conjure'
   use 'TimUntersberger/neogit'
+	use 'gelguy/wilder.nvim'
 
 	use 'sainnhe/sonokai'
   use 'windwp/nvim-spectre'
@@ -48,5 +43,27 @@ return require('packer').startup(function()
 			config = function()
 					require('Comment').setup()
 			end
+	}
+
+	use {
+		'lewis6991/gitsigns.nvim',
+		requires = {
+			'nvim-lua/plenary.nvim'
+		},
+		config = function()
+			require('gitsigns').setup()
+		end
+	}
+
+	use {
+		"folke/which-key.nvim",
+		config = function() 
+			require("which-key").setup {
+				triggers_blacklist = {
+					i = { "f", "d" },
+					v = { "f", "d" },
+				}
+			}
+		end
 	}
 end)

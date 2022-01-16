@@ -34,3 +34,7 @@ vim.g.rainbow_active = 1
 vim.g.coq_settings = { auto_start = 'shut-up' }
 
 vim.cmd 'colorscheme sonokai'
+
+vim.cmd "call wilder#setup({'modes': [':', '/', '?']})"
+
+vim.cmd "call wilder#set_option('renderer', wilder#popupmenu_renderer({ 'highlighter': wilder#basic_highlighter(), }))"
