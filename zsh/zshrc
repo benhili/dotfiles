@@ -37,9 +37,13 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export GOPRIVATE=github.com/LatitudeFinancial
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$HOME/.cargo/env
 
 path+=/usr/local/bin:/usr/bin:/bin:/usr/sbin:
 export PATH
+
+# Rbenv setup
+eval "$(rbenv init - zsh)"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=999999999

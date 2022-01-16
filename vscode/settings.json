@@ -1,6 +1,7 @@
 {
   "editor.fontFamily": "FiraCode Nerd Font",
-  "editor.fontSize": 12,
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
   "editor.fontLigatures": true,
   "workbench.fontAliasing": "antialiased",
   "files.exclude": {
@@ -135,6 +136,26 @@
         "magit.status"
       ]
     },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "t"
+      ],
+      "commands": [
+        "go.test.package"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "c"
+      ],
+      "commands": [
+        "go.test.coverage"
+      ]
+    },
   ],
   // formatting
   "editor.formatOnSave": true,
@@ -158,7 +179,7 @@
   "go.lintTool": "golint",
   "redhat.telemetry.enabled": false,
   "explorer.confirmDragAndDrop": false,
-  "workbench.colorTheme": "GitHub Light",
+  "workbench.colorTheme": "Alabaster",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "git.path": "/usr/bin/git",
@@ -166,7 +187,6 @@
   "gitlens.advanced.messages": {
     "suppressGitMissingWarning": true
   },
-  "terminal.integrated.fontSize": 14,
   "editor.minimap.enabled": false,
   "[clojure]": {
     "editor.autoClosingBrackets": "always",
@@ -180,11 +200,20 @@
     "maxLength": 50,
     "printEngine": "pprint"
   },
-  "workbench.activityBar.visible": false,
   "window.titleBarStyle": "custom",
   "vim.easymotion": true,
   "vim.incsearch": true,
   "search.useReplacePreview": true,
   "python.formatting.provider": "black",
-  "window.zoomLevel": 1
+  "diffEditor.ignoreTrimWhitespace": false,
+  "ruby.useLanguageServer": true, // use the internal language server (see below)
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": false
+    },
+  },
+  "ruby.format": "rubocop",
+  "[ruby]": {
+    "editor.defaultFormatter": "rebornix.ruby"
+  } // use rubocop for formatting
 }
