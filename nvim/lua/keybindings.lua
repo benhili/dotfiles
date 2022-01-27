@@ -15,7 +15,8 @@ end
 imap('fd', '<Esc>')
 nmap('<leader>bn', '<cmd>bnext<cr>')
 nmap('<leader>bp', '<cmd>bprev<cr>')
-nmap('<leader>bd', '<cmd>bdelete<cr>')
+nmap('<leader>bd', '<cmd>bdelete!<cr>')
+nmap('<leader>bk', '<cmd>BufferCloseAllButCurrent!<cr>')
 nmap('<Esc>', '<cmd>noh<cr>')
 
 wk.register({
@@ -25,10 +26,20 @@ wk.register({
 		f = {'<cmd>lua require("telescope.builtin").find_files()<cr>', "find file"},
 		p = {'<cmd>Telescope projects<cr>', "search projects"},
 		s = {"<cmd>lua require('spectre').open()<cr>", "search and replace (spectre)"},
+		r = {"<cmd>Ranger<cr>", "ranger"}
 	},
-  v = {"<cmd>CHADopen<cr>", "open CHAD tree"},
+  t = {"<cmd>CHADopen<cr>", "open CHAD tree"},
 	g = { 
+		name = "git",
 		s = {"<cmd>Neogit<cr>", "neogit"}
-	}
+	},
+	e = {
+		name = "eval",
+		f = {"<cmd>ConjureEvalCurrentForm<cr>", "eval form"},
+		b = {"<cmd>ConjureEvalBuf<cr>", "eval buffer"},
+		r = {"<cmd>ConjureEvalRootForm<cr>", "eval root"},
+	},
+	q = {"<cmd>:w|bd<cr>", "save and quit buffer"}
+	
 }, { prefix = "<leader>" })
 

@@ -1,4 +1,7 @@
 vim.cmd([[
+autocmd BufWritePre *.js lua vim.lsp.buf.formatting()
+autocmd BufWritePre *.ts lua vim.lsp.buf.formatting()
+autocmd BufWritePre *.py lua vim.lsp.buf.formatting()
 autocmd BufWritePre *.go lua vim.lsp.buf.formatting()
 autocmd BufWritePre *.clj lua vim.lsp.buf.formatting()
 ]])

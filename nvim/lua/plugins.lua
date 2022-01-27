@@ -19,6 +19,8 @@ return require('packer').startup(function()
   use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
   use {'ms-jpq/coq.thirdparty', branch = '3p'}
 
+	use "akinsho/toggleterm.nvim"
+
 	use {
 		'nvim-lualine/lualine.nvim', 
 		requires = { 
@@ -66,4 +68,6 @@ return require('packer').startup(function()
 			}
 		end
 	}
+
+  use 'francoiscabrol/ranger.vim'
 end)
