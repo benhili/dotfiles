@@ -69,5 +69,5 @@ return require('packer').startup(function()
 		end
 	}
 
-  use 'francoiscabrol/ranger.vim'
+	use { "nvim-telescope/telescope-file-browser.nvim" }
 end)

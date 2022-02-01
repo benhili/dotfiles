@@ -159,15 +159,9 @@
   ],
   // formatting
   "editor.formatOnSave": true,
-  "[go]": {
-    "editor.defaultFormatter": "golang.go",
-  },
   "go.coverOnSingleTest": true,
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "[sass]": {
-    "editor.formatOnSave": false
   },
   // misc
   "diffEditor.renderSideBySide": true,
@@ -175,15 +169,12 @@
   "workbench.sideBar.location": "right",
   "yaml.validate": false,
   "workbench.iconTheme": "material-icon-theme",
-  "go.lintOnSave": "file",
-  "go.lintTool": "golint",
   "redhat.telemetry.enabled": false,
   "explorer.confirmDragAndDrop": false,
   "workbench.colorTheme": "Sonokai",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "git.path": "/usr/bin/git",
-  "go.toolsManagement.autoUpdate": true,
   "gitlens.advanced.messages": {
     "suppressGitMissingWarning": true
   },
@@ -214,6 +205,11 @@
   },
   "ruby.format": "rubocop",
   "[ruby]": {
-    "editor.defaultFormatter": "rebornix.ruby"
-  } // use rubocop for formatting
+    "editor.defaultFormatter": "rebornix.ruby",
+    // use rubocop for formatting
+  },
+  "go.autocompleteUnimportedPackages": true,
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+  }
 }

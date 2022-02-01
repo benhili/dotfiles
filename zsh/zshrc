@@ -39,7 +39,7 @@ export GOPRIVATE=github.com/LatitudeFinancial
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:$HOME/.cargo/env
 
-path+=/usr/local/bin:/usr/bin:/bin:/usr/sbin:
+path+=/usr/local/bin:/usr/bin:/bin:/usr/sbin:$HOME/.local/bin:
 export PATH
 
 # Rbenv setup
