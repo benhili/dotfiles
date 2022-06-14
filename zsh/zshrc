@@ -42,15 +42,12 @@ export PATH=$PATH:$HOME/.cargo/env
 path+=/usr/local/bin:/usr/bin:/bin:/usr/sbin:$HOME/.local/bin:
 export PATH
 
-# Rbenv setup
-eval "$(rbenv init - zsh)"
-
 HISTFILE=~/.zsh_history
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
 
 # Source Z
-. /usr/local/etc/profile.d/z.sh
+# . /usr/local/etc/profile.d/z.sh
 
 # Node memory allocation
 export NODE_OPTIONS=--max_old_space_size=4096
@@ -67,10 +64,10 @@ prompt pure
 PURE_PROMPT_SYMBOL="λ"
 
 # FD to escape vim insert mode
-bindkey -M viins 'fd' vi-cmd-mode
+# bindkey -M viins 'fd' vi-cmd-mode
 
 # Required for Ranger
-export EDITOR="nvim"
+export EDITOR="emacs"
 
 # TODO delete these when/if I stop working with serverless
 # tabtab source for serverless package
@@ -86,3 +83,4 @@ export EDITOR="nvim"
 # 🤔
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
