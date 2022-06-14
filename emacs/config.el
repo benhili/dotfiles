@@ -9,10 +9,12 @@
 
 (setq-default evil-escape-key-sequence "fd")
 
+(setq doom-theme 'modus-operandi)
+
 (setq doom-font (font-spec :family "Fira Code" :size 13)
       doom-big-font (font-spec :family "Fira Code" :size 16))
 
-(set-face-bold-p 'bold nil)
+(set-face-bold 'bold nil)
 
 (setq ns-use-thin-smoothing t)
 (setq pixel-scroll-precision-mode t)
