@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
-ln -sf ~/dotfiles/emacs/* ~/.doom.d/
+ln -s ~/dotfiles/emacs/.doom.d ~/.doom.d
 
 # Neovim and VSCode configs (unused)
 # ln -sf ~/dotfiles/nvim ~/.config/nvim
