@@ -33,11 +33,9 @@ configPath="$HOME/dotfiles/zsh"
 source $configPath/aliases
 source $configPath/plugins
 
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/go
-export GOPRIVATE=github.com/LatitudeFinancial
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:$HOME/.cargo/env
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
 path+=/usr/local/bin:/usr/bin:/bin:/usr/sbin:$HOME/.local/bin:
 export PATH
@@ -45,6 +43,7 @@ export PATH
 HISTFILE=~/.zsh_history
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
+OP_BIOMETRIC_UNLOCK_ENABLED=true
 
 # Source Z
 # . /usr/local/etc/profile.d/z.sh
@@ -56,13 +55,13 @@ export NODE_OPTIONS=--max_old_space_size=4096
 export FZF_DEFAULT_COMMAND='rg --files'
 
 ZSH_THEME=""
+
 # .zshrc
 autoload -U promptinit; promptinit
 prompt pure
 
 # λ in case the emoji gets obnoxious
 PURE_PROMPT_SYMBOL="λ"
-
 # FD to escape vim insert mode
 # bindkey -M viins 'fd' vi-cmd-mode
 
@@ -84,3 +83,6 @@ export EDITOR="emacs"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export NODE_EXTRA_CA_CERTS=$HOME/certs/IAG_full_CA_chain.pem
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="~/.config/emacs/bin:$PATH"

@@ -1,53 +1,77 @@
-return require('packer').startup(function()
-	use 'wbthomason/packer.nvim'
-  use 'neovim/nvim-lspconfig'
-  use 'nvim-lua/plenary.nvim'
-  use 'tpope/vim-surround'
-  use 'justinmk/vim-sneak'
-  use 'junegunn/rainbow_parentheses.vim'
-  use 'Olical/conjure'
-  use 'TimUntersberger/neogit'
-	use 'gelguy/wilder.nvim'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
 
-	use 'sainnhe/sonokai'
-  use 'windwp/nvim-spectre'
-  use 'nvim-telescope/telescope.nvim'
-  use 'romgrk/barbar.nvim'
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+vim.opt.rtp:prepend(lazypath)
 
-  use {'ms-jpq/coq_nvim', branch = 'coq'}
-  use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
-  use {'ms-jpq/coq.thirdparty', branch = '3p'}
+require("lazy").setup({
+	'neovim/nvim-lspconfig',
+	'nvim-lua/plenary.nvim',
+	'tpope/vim-surround',
+	'justinmk/vim-sneak',
+	'junegunn/rainbow_parentheses.vim',
+	'Olical/conjure',
+	'TimUntersberger/neogit',
+	'gelguy/wilder.nvim',
+	{
+		"NeogitOrg/neogit",
+		dependencies = {
+			"nvim-lua/plenary.nvim",      -- required
+			"nvim-telescope/telescope.nvim", -- optional
+			"sindrets/diffview.nvim",     -- optional
+			"ibhagwan/fzf-lua",           -- optional
+		},
+		config = true
+	},
+	'sainnhe/sonokai',
+	'windwp/nvim-spectre',
+	{
+		'nvim-telescope/telescope.nvim',
+		config = function()
+			require('telescope').setup {
+				defaults = { file_ignore_patterns = { ".git/" } },
+				pickers = { find_files = { hidden = true } }
+			}
+		end
+	},
+	'romgrk/barbar.nvim',
+	{ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
 
-	use "akinsho/toggleterm.nvim"
+	{ 'ms-jpq/coq_nvim',                 branch = 'coq' },
+	{ 'ms-jpq/coq.artifacts',            branch = 'artifacts' },
+	{ 'ms-jpq/coq.thirdparty',           branch = '3p' },
+	'nvim-tree/nvim-web-devicons',
+	"akinsho/toggleterm.nvim",
+	'nvim-lualine/lualine.nvim',
 
-	use {
-		'nvim-lualine/lualine.nvim', 
-		requires = { 
-			'kyazdani42/nvim-web-devicons', 
-			opt = true 
-		}
-	}
 
-  use {
-		'ms-jpq/chadtree', 
-		branch = 'chad', 
+	{
+		'ms-jpq/chadtree',
+		branch = 'chad',
 		run = 'python3 -m chadtree deps'
-	}
+	},
 
-	use {
+	{
 		"ahmedkhalf/project.nvim",
-		config = function() require("project_nvim").setup {} end 
-	}
+		config = function() require("project_nvim").setup {} end
+	},
 
-	use {
-			'numToStr/Comment.nvim',
-			config = function()
-					require('Comment').setup()
-			end
-	}
+	{
+		'numToStr/Comment.nvim',
+		config = function()
+			require('Comment').setup()
+		end
+	},
 
-	use {
+	{
 		'lewis6991/gitsigns.nvim',
 		requires = {
 			'nvim-lua/plenary.nvim'
@@ -55,11 +79,11 @@ return require('packer').startup(function()
 		config = function()
 			require('gitsigns').setup()
 		end
-	}
+	},
 
-	use {
+	{
 		"folke/which-key.nvim",
-		config = function() 
+		config = function()
 			require("which-key").setup {
 				triggers_blacklist = {
 					i = { "f", "d" },
@@ -67,7 +91,7 @@ return require('packer').startup(function()
 				}
 			}
 		end
-	}
+	},
 
-	use { "nvim-telescope/telescope-file-browser.nvim" }
-end)
+	"nvim-telescope/telescope-file-browser.nvim"
+})
