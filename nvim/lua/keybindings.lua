@@ -26,15 +26,11 @@ wk.register({
 	},
 	s = {
 		name = "search",
-		s    = { '<cmd>lua require("telescope.builtin").current_buffer_fuzzy_find()<cr>', "grep project" },
+		s    = { '<cmd>lua require("telescope.builtin").current_buffer_fuzzy_find()<cr>', "grep buffer" },
 		p    = { '<cmd>lua require("telescope.builtin").live_grep()<cr>', "grep project" },
 		r    = { "<cmd>lua require('spectre').open()<cr>", "search and replace (spectre)" },
 	},
-	f = {
-		name = "find",
-		f    = { '<cmd>lua require("telescope.builtin").find_files{ path_display = { "truncate" } }<cr>', "find file" },
-	},
-	["."] = { '<cmd>Telescope file_browser<cr>', "search files" },
+	["."] = { '<cmd>lua require("telescope.builtin").find_files{ path_display = { "truncate" } }<cr>', "find file" },
 	p = {
 		p = { '<cmd>Telescope projects<cr>', "search projects" },
 	},
